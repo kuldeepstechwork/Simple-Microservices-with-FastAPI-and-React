@@ -58,7 +58,7 @@ async def create(request:Request, background_tasks: BackgroundTasks): #id, quant
     )
     order.save()
 
-    background_tasks.add_task(order_completed, order)
+    background_tasks.add_task(order_completed, order)#make payment
 
     return order 
 
@@ -66,3 +66,4 @@ def order_completed(order:Order):
     time.sleep(5)
     order.status = 'completed'
     order.save()
+    redis.xadd('order_completed', order.dict(),'*') #sending events to redis microservice
