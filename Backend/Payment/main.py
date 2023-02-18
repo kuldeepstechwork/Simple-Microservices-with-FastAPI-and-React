@@ -18,9 +18,9 @@ app.add_middleware(
 
 #each microservice need its own database
 redis = get_redis_connection(
-    host = "redis-16426.c16.us-east-1-2.ec2.cloud.redislabs.com",
-    port = 16426,
-    password = "MUZr8UnXgMmR1Kd8p8WcqtpLWcJ2Q6Ti",
+    host = #use your host here,
+    port = #use your port,
+    password = #use your password,
     decode_responses = True
 )
 
