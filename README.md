@@ -42,5 +42,7 @@ User-friendly interface built with React.
 Backend built with Python FastAPI, a modern and fast framework for building APIs.
 Database powered by RedisJSON, a NoSQL database.
 Event dispatch using Redis Streams, an event bus similar to RabbitMQ or Apache Kafka.
+
+
 Conclusion
 This project provides a simple but powerful way to build microservices apps with Python and React. The use of RedisJSON and Redis Streams allows for easy data storage and event dispatch, making it a great choice for microservices apps.
